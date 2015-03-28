@@ -1,0 +1,13 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  background-color: #ff00ff;
+}
+
+.renderer
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
