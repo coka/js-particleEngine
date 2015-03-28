@@ -81,16 +81,16 @@ window.onload = function execute()
     requestAnimFrame(animate);
   }
 
-  stage.mousedown = function (data)
+  stage.mousedown = stage.touchstart = function (data)
   {
     isDown = true;
     mousepx = data.global.x;
     mousepy = data.global.y;
   }
 
-  stage.mouseup = function () { isDown = false; }
+  stage.mouseup = stage.touchend = function () { isDown = false; }
 
-  stage.mousemove = function (data)
+  stage.mousemove = stage.touchmove = function (data)
   {
     if (!isDown) { return; }
     var mv = vec2.fromValues(data.global.x - mousepx, data.global.y - mousepy);
